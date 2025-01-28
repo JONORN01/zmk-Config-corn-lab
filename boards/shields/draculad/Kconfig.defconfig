@@ -1,0 +1,34 @@
+if SHIELD_DRACULAD_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "DracuLad Left"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_DRACULAD_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "DracuLad Right"
+
+endif
+
+if SHIELD_DRACULAD_LEFT || SHIELD_DRACULAD_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+if ZMK_DISPLAY
+
+config I2C
+#    default y
+
+config SSD1306
+#    default y
+
+config SSD1306_REVERSE_MODE
+#    default y
+
+endif # ZMK_DISPLAY
